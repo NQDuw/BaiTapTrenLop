@@ -23,20 +23,38 @@ namespace BaiTap2
         protected void btLuu_Click(object sender, EventArgs e)
         {
             string data = $"{ddlLoaiBanh.SelectedItem.Text}({txtSoLuong.Text})";
-            lbBanh.Items.Add(data);
+            lstBanh.Items.Add(data);
         }
 
         protected void btnXoa_Click(object sender, EventArgs e)
         {
             /*int index = lbBanh.SelectedIndex;
             lbBanh.Items.RemoveAt(index);*/
-            for(int i = lbBanh.Items.Count - 1; i >= 0; i--)
+            for(int i = lstBanh.Items.Count - 1; i >= 0; i--)
             {
-                if (lbBanh.Items[i].Selected)
+                if (lstBanh.Items[i].Selected)
                 {
-                    lbBanh.Items.RemoveAt(i); 
+                    lstBanh.Items.RemoveAt(i); 
                 }
             }
+        }
+
+        protected void btnInDon_Click(object sender, EventArgs e)
+        {
+            string kq = "";
+            kq += "<ul>";
+            kq += "<br>";
+            kq += "<h2>Thông tin đơn hàng của bạn</h2>";
+            kq += "<ul>";
+            kq += $"<li>Khách hàng: {txtKhachHang.Text}</li> ";
+            kq += $"<li>Địa Chỉ: {txtDiaChi.Text}</li> ";
+            kq += $"<li>Mã Số Thuế: {txtMaSoThue.Text}</li> ";
+            kq += $"<li>Loại Bánh:{lstBanh.Text} </li> ";
+
+            
+            kq += "<ul>";
+            //B2.Trả Kết quả về client
+            lbKetQua.Text = kq;
         }
     }
 }

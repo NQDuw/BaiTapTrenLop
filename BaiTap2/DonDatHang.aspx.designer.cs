@@ -33,6 +33,15 @@ namespace BaiTap2
         protected global::System.Web.UI.WebControls.TextBox txtKhachHang;
 
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// txtDiaChi control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace BaiTap2
         protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
 
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
         /// txtMaSoThue control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace BaiTap2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMaSoThue;
+
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
         /// ddlLoaiBanh control.
@@ -69,6 +96,24 @@ namespace BaiTap2
         protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
 
         /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+
+        /// <summary>
         /// btnLuu control.
         /// </summary>
         /// <remarks>
@@ -78,13 +123,13 @@ namespace BaiTap2
         protected global::System.Web.UI.WebControls.Button btnLuu;
 
         /// <summary>
-        /// lbBanh control.
+        /// lstBanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbBanh;
+        protected global::System.Web.UI.WebControls.ListBox lstBanh;
 
         /// <summary>
         /// btnXoa control.
@@ -96,6 +141,15 @@ namespace BaiTap2
         protected global::System.Web.UI.WebControls.Button btnXoa;
 
         /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+
+        /// <summary>
         /// btnInDon control.
         /// </summary>
         /// <remarks>
@@ -103,5 +157,14 @@ namespace BaiTap2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInDon;
+
+        /// <summary>
+        /// lbKetQua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lbKetQua;
     }
 }
