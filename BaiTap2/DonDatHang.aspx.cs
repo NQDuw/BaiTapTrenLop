@@ -36,7 +36,7 @@ namespace BaiTap2
                     soLuong = int.Parse(txtSoLuong.Text) + int.Parse(arr[1]);
                     lstBanh.Items[i].Text = $"{ddlLoaiBanh.SelectedItem.Text} ({soLuong})";
                     checkExist = true;
-                    break;
+                    break; 
                 }
             }
             //
