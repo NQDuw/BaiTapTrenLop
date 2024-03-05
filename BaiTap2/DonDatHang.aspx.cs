@@ -74,7 +74,7 @@ namespace BaiTap2
                 kq += "</tr>";
             }
             kq += "</table>";
-            kq += "</div>"; 
+            kq += "</div>";  
 
             kq += "<ul>";
             //B2.Trả Kết quả về client
