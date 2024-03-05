@@ -59,7 +59,7 @@
                     <h4>Chọn các loại bánh sau</h4>
                     <asp:ListBox ID="lstBanh" SelectionMode="Multiple" runat="server" CssClass="form-control"></asp:ListBox>
                     <div class="text-center ">
-                    <asp:Button ID="btnXoa" runat="server"  CssClass="btn btn-outline-primary" Text="Xóa" OnClick="btnXoa_Click" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="26px" ImageUrl="~/ff/pngtree-delete-button-3d-icon-png-image_6217492.png" OnClick="ImageButton1_Click" Width="33px" />
                 </div>
                 </div>
                 <div class="text-center ">
@@ -69,7 +69,11 @@
                 </div>
             </div>
         </div>
-        <asp:Literal ID="lbKetQua" runat="server"></asp:Literal>
+        <div class="text-center ">
+                    <asp:Literal ID="lbKetQua" runat="server"></asp:Literal>
+                    <br />
+                </div>
+        
     </form>
 </body>
 </html>

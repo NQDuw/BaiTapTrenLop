@@ -22,40 +22,76 @@ namespace BaiTap2
 
         protected void btLuu_Click(object sender, EventArgs e)
         {
-            string data = $"{ddlLoaiBanh.SelectedItem.Text}({txtSoLuong.Text})";
-            lstBanh.Items.Add(data);
-        }
-
-        protected void btnXoa_Click(object sender, EventArgs e)
-        {
-            /*int index = lbBanh.SelectedIndex;
-            lbBanh.Items.RemoveAt(index);*/
-            for(int i = lstBanh.Items.Count - 1; i >= 0; i--)
+            bool checkExist = false;
+            char[] delim = { '(', ')' };
+            int soLuong;
+            // kiểm tra tồn tại
+            for(int i = 0; i < lstBanh.Items.Count; i++)
             {
-                if (lstBanh.Items[i].Selected)
+                string itemText = lstBanh.Items[i].Text;
+                if (itemText.Contains(ddlLoaiBanh.SelectedItem.Text))
                 {
-                    lstBanh.Items.RemoveAt(i); 
+                    // xử lý cộng dồn số lượng
+                    string[] arr = itemText.Split(delim);
+                    soLuong = int.Parse(txtSoLuong.Text) + int.Parse(arr[1]);
+                    lstBanh.Items[i].Text = $"{ddlLoaiBanh.SelectedItem.Text} ({soLuong})";
+                    checkExist = true;
+                    break;
                 }
             }
+            //
+            if (!checkExist)
+            {
+                string data = $"{ddlLoaiBanh.SelectedItem.Text}({txtSoLuong.Text})";
+                lstBanh.Items.Add(data);
+            }
         }
+
+        
 
         protected void btnInDon_Click(object sender, EventArgs e)
         {
 
             string kq = "";
-            kq += "<ul>";
-            kq += "<br>";
-            kq += "<h2>Thông tin đơn hàng của bạn</h2>";
-            kq += "<ul>";
-            kq += $"<li>Khách hàng: {txtKhachHang.Text}</li> ";
-            kq += $"<li>Địa Chỉ: {txtDiaChi.Text}</li> ";
-            kq += $"<li>Mã Số Thuế: {txtMaSoThue.Text}</li> ";
-            kq += $"<li>Loại Bánh:{lstBanh.Text} </li> ";
-
+            //B1.thu thập thông tin
+           
+            kq += "<h2>Hóa đơn của bạn</h2>";
             
+            kq += "<div class='border border-primary'>";
+            kq += "<div class='text-danger'>";
+            kq += $"Khách hàng:<i> {txtKhachHang.Text}</i> <br>";
+            kq += $"Địa Chỉ:<i>" + txtDiaChi.Text + "</i> <br>";
+            kq += $"Mã Số Thuế:<i> {txtMaSoThue.Text}</i> <br>";
+            kq += "</div>";
+            kq += "<b>Đặt các loại bánh sau</b>";
+            kq += "<table class='table table-bordered'>";
+            char[] delim = {'(',')'};
+            foreach(ListItem item in lstBanh.Items)
+            {
+                string[] arr = item.Text.Split(delim);
+                kq += "<tr>";
+                kq += $"<td>{arr[0]}</td><td>{ arr[1]}</td>";
+                kq += "</tr>";
+            }
+            kq += "</table>";
+            kq += "</div>";
+
             kq += "<ul>";
             //B2.Trả Kết quả về client
             lbKetQua.Text = kq;
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            /*int index = lbBanh.SelectedIndex;
+           lbBanh.Items.RemoveAt(index);*/
+            for (int i = lstBanh.Items.Count - 1; i >= 0; i--)
+            {
+                if (lstBanh.Items[i].Selected)
+                {
+                    lstBanh.Items.RemoveAt(i);
+                }
+            }
         }
     }
 }
