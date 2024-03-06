@@ -22,7 +22,7 @@
                     <asp:TextBox ID="txtKhachHang" runat="server" CssClass="form-control"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtKhachHang" ErrorMessage="Khách Hàng Không Được Rỗng " ForeColor="#CC00CC">{*}</asp:RequiredFieldValidator>
                 </div>
-             </div>
+             </div> 
              <div class="row">
                 <div class="col-2">
                     Địa Chỉ
